@@ -1,3 +1,14 @@
 spring:
   application:
     name: hotel-search-challenge
+  datasource:
+    url: jdbc:oracle:thin:@${ORACLE_HOST:localhost}:1521/FREEPDB1
+    username: ${ORACLE_APP_USER}
+    password: ${ORACLE_APP_USER_PWD}
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
