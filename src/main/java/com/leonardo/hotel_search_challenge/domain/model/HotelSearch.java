@@ -25,7 +25,8 @@ public record HotelSearch(
         Objects.requireNonNull(ages, "El campo 'ages' no puede ser nulo");
         if(ages.isEmpty()) throw new IllegalArgumentException("El campo 'ages' no puede estar vacío");
         for(Integer age : ages){
-            if(age < 0) throw new IllegalArgumentException("El campo 'age' debe ser mayor o igual a 0");
+            Objects.requireNonNull(age, "Las edades dentro del campo 'ages' no pueden ser nulas");
+            if(age < 0) throw new IllegalArgumentException("Las edades dentro del campo 'ages' deben ser mayores o iguales a 0");
         }
 
         //Copia defensiva de "ages"
