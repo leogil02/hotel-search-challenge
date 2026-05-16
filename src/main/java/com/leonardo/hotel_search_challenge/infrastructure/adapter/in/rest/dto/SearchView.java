@@ -19,6 +19,6 @@ public record SearchView(
         LocalDate checkOut,
 
         @Schema(example = "[3, 29, 30, 1]")
-        List<Long> ages
+        List<Integer> ages
 ) {
 }

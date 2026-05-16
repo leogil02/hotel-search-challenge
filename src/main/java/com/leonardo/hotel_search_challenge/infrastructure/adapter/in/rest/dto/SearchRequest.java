@@ -30,7 +30,7 @@ public record SearchRequest(
         List<
                 @NotNull(message = "Las edades dentro del campo 'ages' no pueden ser nulas")
                 @PositiveOrZero(message = "Las edades dentro del campo 'ages' deben ser mayores o iguales a 0")
-                Long
+                Integer
         > ages
 ) {
 }
